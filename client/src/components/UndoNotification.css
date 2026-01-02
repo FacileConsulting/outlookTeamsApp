@@ -1,0 +1,97 @@
+.undo-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323130;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10000 !important;
+  min-width: 300px;
+  max-width: 500px;
+  animation: slideUp 0.3s ease-out;
+  pointer-events: auto;
+  display: block !important;
+  visibility: visible !important;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.undo-notification-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.undo-message {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+.undo-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.undo-button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.undo-button:hover {
+  background-color: #106ebe;
+}
+
+.undo-button:active {
+  background-color: #005a9e;
+}
+
+.undo-dismiss-button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  border-radius: 2px;
+}
+
+.undo-dismiss-button:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.undo-timer-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #0078d4;
+  border-radius: 0 0 4px 4px;
+  transition: width 1s linear;
+}
+

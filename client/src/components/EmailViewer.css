@@ -1,0 +1,86 @@
+.email-viewer {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.email-viewer.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: #605e5c;
+}
+
+.empty-state p {
+  font-size: 1.125rem;
+}
+
+.email-viewer-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #edebe9;
+}
+
+.email-viewer-subject {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #323130;
+  margin-bottom: 1rem;
+}
+
+.email-viewer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email-meta-row {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.meta-label {
+  color: #605e5c;
+  font-weight: 600;
+  min-width: 50px;
+}
+
+.meta-value {
+  color: #323130;
+  flex: 1;
+}
+
+.meta-email {
+  color: #605e5c;
+  margin-left: 0.25rem;
+}
+
+.email-viewer-body {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.email-body-html,
+.email-body-text {
+  color: #323130;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.email-body-html {
+  white-space: normal;
+}
+
+.email-body-html img {
+  max-width: 100%;
+  height: auto;
+}
+
